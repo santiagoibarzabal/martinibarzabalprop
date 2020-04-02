@@ -1,0 +1,339 @@
+* {
+    font-family: Lato;
+}
+/* NAVBAR */
+
+.navbar-item {
+    margin: 0px 0px;
+    padding: 0px 0px;
+    text-decoration: none;
+    list-style-type: none; 
+    text-align: center; 
+}
+
+.navbar-item a { 
+    color: black;
+    font-size: 1.2rem;
+}
+.navbar-item a:hover {
+    text-decoration: none;
+    color:#ab2121;
+}
+
+.logo-navbar {
+    height: 50px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+  }
+
+.quit {
+  border: 0px;
+  font-size: 1.2rem;
+}
+
+.quit:hover {
+  text-decoration: none;
+  color:#ab2121;
+}
+
+  /* FOOTER */
+  
+html {
+    min-height: 95%;
+    position: relative;
+  }
+body {
+    margin: 0;
+    margin-bottom: 60px;
+  }
+footer {
+    text-align: center; 
+    position: absolute;
+    bottom: 0;
+    right:30px;
+    width: 100%;
+    height: 40px;
+  }
+
+.footer-item {
+    margin: 0px 0px;
+    padding: 0px 0px;
+    text-decoration: none;
+    list-style-type: none; 
+    text-align: center; 
+}
+
+.footer-item a { 
+    color: black;
+    font-size: 1.2rem;
+}
+.footer-item a:hover {
+    text-decoration: none;
+    color: #ab2121;
+}
+
+.logo-footer {
+    height: 60px;
+}
+
+.martillero {
+    font-size: 0.75rem;
+}
+
+.datos-contacto a{ 
+    font-size: 1rem;
+}
+
+
+.link-footer {
+    text-decoration: none;
+    text-align: center;
+  }
+  
+.link-footer:hover,
+.icon-social-footer:hover {
+  text-decoration: none;
+  color: #ab2121;
+}
+
+.icon-social-footer {
+  font-size: 35px;
+  color: #22358d;
+  padding-left: 5px;
+}
+
+/* Linea */
+
+hr {
+    display: block;
+    border-width: .25px;
+    border-color: rgba(0,0,0,0.1);
+    color: rgba(0,0,0,0.1);
+    background-color: rgba(0,0,0,0.1);
+}
+
+/* NOSOTROS */
+.carousel-caption h2{
+  font-size: 5rem;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  color: rgba(0,0,0,0.8);
+  position: absolute;
+    bottom:90vh;
+}
+.carousel2 h2{
+  font-size: 5rem;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  color: lightcyan;
+  position: absolute;
+    bottom:90vh;
+}
+
+.btn-cta{
+  background-color: #ab2121;
+  color: #fff;
+  width: 20%;
+  position: relative;
+    bottom: 70vh;
+    right: 15px;
+}
+
+.logo {
+  width: 30%;
+}
+.landing {
+  width: 100%;
+  
+}
+.titulo-servicios {
+  color: #22358d;
+}
+
+
+.subtitulo-servicios {
+  color: rgba(0,0,0,0.7);
+  font-size: 1.3rem;
+}
+
+.item-servicios {
+  color:  #ab2121;
+}
+
+.subitem-servicios {
+  font-weight: bold;
+}
+
+.descripcion-servicios {
+  color: rgba(0,0,0,0.6);
+}
+
+.bg-medio {
+  background-color: rgba(0,0,0,0.05);
+}
+
+.bg-oscuro {
+  background-color: gainsboro;
+}
+
+
+/* CONTACTO */
+
+.titulo-contacto {
+  color: #22358d;
+}
+
+.btn-contacto {
+  background-color:  #ab2121;
+  color: white;
+}
+
+.btn-contacto:hover {
+  color:white;
+  opacity: .7;
+}
+
+.mensaje {
+  color: green;
+  font-family: 'Rubik', sans-serif;
+}
+
+/* PROPIEDADES */
+
+.titulo-filtro {
+  border: solid 1px #22358d;
+  background-color: #22358d;
+  color: white;
+  padding: 1.5rem 0.5rem;
+  
+}
+
+.subtitulo-filtro {
+  color: #ab2121;
+}
+
+.link-filtro {
+  color: #22358d;
+  font-size: 1.1rem;
+}
+
+.link-filtro:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.imagen-propiedad {
+  width: 100%;
+}
+
+.imagen-propiedad:hover {
+  width: 100%;
+  opacity: .7;
+}
+
+.precio-propiedad {
+  background-color: #ab2121;
+  color: white;
+  text-align: center;
+}
+
+.tipo-propiedad {
+  color: #22358d;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.tipo-propiedad a {
+  color: #22358d;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.tipo-propiedad a:hover {
+  color:rgba(0,0,0,0.7);
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.descripcion-propiedad {
+  color: #22358d;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.tips-propiedad {
+  color: rgba(0,0,0,0.7);
+}
+
+.btn-link {
+  background-color: #ab2121;
+  color: white;
+  font-family: 'Rubik', sans-serif;
+}
+
+.btn-link:hover {
+  color:white;
+  opacity: .7;
+  text-decoration: none;
+}
+
+input::placeholder {
+  color: black;
+}
+
+/* CREAR PROPIEDAD */
+
+img#imgclick {
+  cursor: pointer;
+}
+
+#info {
+  text-align: center;
+}
+
+
+input#image {
+  display: none;
+}
+
+
+/* HOME / INICIO DE SESION */
+
+.btn-ibarzabal{
+  background-color: #ab2121;
+  color: white;
+}
+
+.btn-ibarzabal a{
+  text-decoration: none;
+  color: white;
+  
+}
+
+.btn-ibarzabal:hover{
+  color:white;
+  opacity: .7;
+  text-decoration: none;
+}
+
+
+  @media only screen and (min-width: 768px) {
+
+    /* FOOTER */
+
+    .footer-social {
+      justify-content: space-between;
+    }
+
+    /* NOSOTROS */
+    .logo {
+      width: 70%;
+      opacity: .7;
+      filter: none;
+    }
+
+    .logo:hover {
+      opacity: 1;
+    }
+
+  }
