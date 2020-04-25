@@ -10,6 +10,18 @@ use \App\Category;
 
 use \App\Type;
 
+use \App\Feature;
+
+use \App\Room;
+
+use \App\Service;
+
+use Illuminate\Support\Str;
+
+use Illuminate\Support\Arr;
+
+
+
 class PropertiesController extends Controller
 {
     /**
@@ -24,11 +36,20 @@ class PropertiesController extends Controller
         $categories = Category::all();
 
         $types = Type::all();
-        
+
+        // Para cada propiedad, convertir la
+
+        // foreach($properties as $property){
+        // $limpiarLocalidad = strtolower(str_replace(' ', '-', $property->town));
+        // $localidad = preg_replace('/[^A-Za-z0-9\-]/', '', $limpiarLocalidad);
+        // $limpiarDireccion = strtolower(str_replace(' ', '-', $property->address)); 
+        // $direccion = preg_replace('/[^A-Za-z0-9\-]/', '', $limpiarDireccion); 
+        // }
+
         return view('properties.index', [
             'properties' => $properties,
             'categories' => $categories,
-            'types' => $types
+            'types' => $types,
             ]);
     }
 
@@ -67,33 +88,67 @@ class PropertiesController extends Controller
             'category_id' => 'required',
             'currency' => 'required|string|min:1|max:4',
             'price' => 'required',
-            'image' => 'required|file',
-            'description' => 'required|string|max:200',
             'address' => 'required|string',
+            'town' => 'required|string',
             'tips' => 'required|string',
-            'link' =>  'required|string',
+            'description' => 'required|string|max:200',
+            'full_description' => 'max:500',
+            'image' => '',
+            'link' => 'required|string',
+            'features' => '',
+            'services' => '',
+            'rooms' => '',
           ]);
+          
+          
 
           $property = new Property;
 
           $path = $request->file('image')->store('public');
-
-        //   $property = Property::create($request->all());
-
           $property->image = $path;
 
           $property->type_id = $request['type_id'];
           $property->category_id = $request['category_id'];
           $property->currency = $request['currency'];
           $property->price = $request['price'];
-          $property->description = $request['description'];
           $property->address = $request['address'];
+          $property->town = $request['town'];
           $property->tips = $request['tips'];
+          $property->description = $request['description'];
+          $property->full_description = $request['full_description'];
           $property->link = $request['link'];
-
           $property->save();
 
-          return redirect('/properties');
+          
+        
+          foreach ($request->features as $key => $value) { 
+            if(isset($value)) {
+                $feature = new Feature;
+                $feature->name = $value;
+                $property->features()->save($feature);
+                } 
+            }
+            
+            
+            foreach ($request->rooms as $key => $value) { 
+                if(isset($value)) {
+                    $room = new Room;
+                    $room->name = $value;
+                    $property->rooms()->save($room);
+                } 
+            }
+        
+            foreach ($request->services as $key => $value) { 
+                if(isset($value)) {
+                    $service = new Service;
+                    $service->name = $value;
+                    $property->services()->save($service);
+                }
+            }
+            
+       
+          
+          return redirect('/propiedades');
 
     }
 
@@ -105,7 +160,26 @@ class PropertiesController extends Controller
      */
     public function show($id)
     {
-        //
+        $property = Property::find($id);
+
+        $categories = Category::all();
+
+        $types = Type::all();
+
+        $properties = Property::all();
+
+        $features = $property->features;
+        $rooms = $property->rooms;
+        $services = $property->services;
+        
+        return view('properties.show', [
+            'property' => $property,
+            'categories' => $categories,
+            'types' => $types,
+            'features' => $features,
+            'rooms' => $rooms,
+            'services' => $services,
+            ]);
     }
 
     /**
@@ -117,10 +191,18 @@ class PropertiesController extends Controller
     public function edit($id)
     {   
         $property = Property::find($id);
+
+        $features = $property->features;
+        $rooms = $property->rooms;
+        $services = $property->services;
         
+
         return view('properties.edit', [
             'property' => $property,
-            'id' => $id
+            'id' => $id,
+            'features' => $features,
+            'rooms' => $rooms,
+            'services' => $services
             ]);
     }
     
@@ -133,9 +215,11 @@ class PropertiesController extends Controller
      */
 
 
-    public function find(Category $category){
+    public function find($name,$id){
 
         $categories = Category::all();
+
+        $category = Category::find($id);
 
         $types = Type::all();
 
@@ -161,24 +245,59 @@ class PropertiesController extends Controller
             'category_id' => 'required',
             'currency' => 'required|string|min:1|max:4',
             'price' => 'required',
-            'image' => 'required|file',
-            'description' => 'required|string|max:200',
             'address' => 'required|string',
+            'town' => '',
             'tips' => 'required|string',
-            'link' =>  'required|string',
+            'description' => 'required|string|max:200',
+            'full_description' => '',
+            'image' => '',
+            'link' => 'required|string',
           ]);
 
           $property = Property::find($id);
+          $incompleteRequest = $request->all();
+           
+          Arr::forget($incompleteRequest, 'features');
+          Arr::forget($incompleteRequest, 'rooms');
+          Arr::forget($incompleteRequest, 'services');
 
-          $diff = array_diff($request->all(), $property->toArray());
+          $diff = array_diff($incompleteRequest, $property->toArray());
 
             if ($request->has('image')) {
                 $diff['image'] = $request->file('image')->store('public');
             }
+
             
             $property->update($diff);
 
-          return redirect('/properties');
+            Feature::where('property_id', $id)->delete();
+            foreach ($request->features as $key => $value) { 
+                if(isset($value)) {
+                    $feature = new Feature;
+                    $feature->name = $value;
+                    $property->features()->save($feature);
+                } 
+            }
+            Room::where('property_id', $id)->delete();
+            foreach ($request->rooms as $key => $value) { 
+                if(isset($value)) {
+                    $room = new Room;
+                    $room->name = $value;
+                    $property->rooms()->save($room);
+                } 
+            }
+            Service::where('property_id', $id)->delete();
+            foreach ($request->services as $key => $value) { 
+                if(isset($value)) {
+                    $service = new Service;
+                    $service->name = $value;
+                    $property->services()->save($service);
+                } 
+            }
+           
+            
+        
+          return redirect('/propiedades');
 
     }
 
@@ -192,8 +311,12 @@ class PropertiesController extends Controller
     {
        $property = Property::find($id);
 
+       $property->features()->delete();
+       $property->rooms()->delete();
+       $property->services()->delete();
+
        $property->delete();
 
-       return redirect('/properties');
+       return redirect('/propiedades');
     }
 }

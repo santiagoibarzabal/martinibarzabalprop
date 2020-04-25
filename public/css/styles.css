@@ -102,7 +102,7 @@ footer {
   padding-left: 5px;
 }
 
-/* Linea */
+/* Linea ABOUT*/
 
 hr {
     display: block;
@@ -113,22 +113,17 @@ hr {
 }
 
 /* NOSOTROS */
+
 .carousel-caption h2{
   font-size: 5rem;
   text-align: center;
   font-family: 'Oswald', sans-serif;
-  color: rgba(0,0,0,0.8);
+  -webkit-text-stroke: 2px black;
+  color: white;
   position: absolute;
     bottom:90vh;
 }
-.carousel2 h2{
-  font-size: 5rem;
-  text-align: center;
-  font-family: 'Oswald', sans-serif;
-  color: lightcyan;
-  position: absolute;
-    bottom:90vh;
-}
+
 
 .btn-cta{
   background-color: #ab2121;
@@ -224,9 +219,19 @@ hr {
 
 .imagen-propiedad {
   width: 100%;
+  min-height: 30vh;
+  max-height: 30vh;
 }
 
 .imagen-propiedad:hover {
+  width: 100%;
+  opacity: .7;
+}
+.imagen-formularios {
+  width: 100%;
+}
+
+.imagen-formularios:hover {
   width: 100%;
   opacity: .7;
 }
@@ -268,7 +273,7 @@ hr {
 .btn-link {
   background-color: #ab2121;
   color: white;
-  font-family: 'Rubik', sans-serif;
+  /* font-family: 'Rubik', sans-serif; */
 }
 
 .btn-link:hover {
@@ -296,6 +301,16 @@ input#image {
   display: none;
 }
 
+/* PROPIEDADES - MOSTRAR PROPIEDAD*/
+
+.items {
+  color: #ab2121;
+}
+.items:hover {
+  
+  color:rgba(0,0,0,0.6);
+}
+
 
 /* HOME / INICIO DE SESION */
 
@@ -314,6 +329,11 @@ input#image {
   color:white;
   opacity: .7;
   text-decoration: none;
+}
+
+/* Imagenes */
+.show-images{
+  max-height:80vh;
 }
 
 

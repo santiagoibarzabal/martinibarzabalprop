@@ -18,8 +18,19 @@ class CreateCategoriesTable extends Migration
             $table->string('name')->nullable();
             $table->timestamps();
         });
-    }
 
+        DB::table('categories')->insert(
+            array(
+                ['id' => 1, 'name' =>'Departamento'],
+                ['id' => 2, 'name' =>'Casa'],
+                ['id' => 3, 'name' =>'Oficina'],
+                ['id' => 4, 'name' =>'Local'],
+                ['id' => 5, 'name' =>'Terreno'],
+                ['id' => 6, 'name' =>'Inmueble Industrial'],
+            )
+        );
+    }
+    
     /**
      * Reverse the migrations.
      *

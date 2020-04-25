@@ -24,29 +24,38 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // PROPIEDADES
 
-Route::get('/properties', 'PropertiesController@index');
+Route::get('/propiedades', 'PropertiesController@index');
 
-Route::get('/properties/find/{category}', 'PropertiesController@find');
+Route::get('/propiedades/buscar/{name?}/{id?}', 'PropertiesController@find')->name('filtro');
+
+// Galeria
+
+// Route::get('/galeria', 'GalleriesController@index');
+// Route::get('/galerias/agregar', 'GalleriesController@create');
+// Route::post('/galerias', 'GalleriesController@store');
+
 
 // Propiedades con AUTH
 
 Route::group(['middleware'=>'admin'],function(){
 
-Route::get('/properties/new', 'PropertiesController@create');
+Route::get('/propiedades/new', 'PropertiesController@create');
 
-Route::post('/properties', 'PropertiesController@store');
+Route::post('/propiedades', 'PropertiesController@store');
 
-Route::get('/properties/list', 'PropertiesController@list');
+Route::get('/propiedades/list', 'PropertiesController@list');
 
-Route::get('/properties/{id}/edit', 'PropertiesController@edit');
+Route::get('/propiedades/{id}/edit', 'PropertiesController@edit');
 
-Route::patch('/properties/{id}', 'PropertiesController@update');
+Route::patch('/propiedades/{id}', 'PropertiesController@update');
 
-Route::delete('/properties/{id}', 'PropertiesController@destroy');
-
-Route::get('/properties/{id}', 'PropertiesController@show');
+Route::delete('/propiedades/{id}', 'PropertiesController@destroy');
 
 });
+
+Route::get('/propiedades/{id}', 'PropertiesController@show')->name('prop');
+
+Route::post('/propiedades/{id}', 'PropformController@store');
 
 // Categorias
 

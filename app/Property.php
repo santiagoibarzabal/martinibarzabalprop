@@ -8,7 +8,7 @@ class Property extends Model
 {
 
     protected $fillable = [
-       'category_id', 'type_id', 'image', 'currency', 'price', 'address', 'tips', 'description', 'link'
+       'category_id', 'type_id', 'image', 'currency', 'price', 'address', 'town', 'tips', 'description','full_description','link','features','rooms','services'
     ];
     
     public function user()
@@ -25,5 +25,25 @@ class Property extends Model
     {
       return $this->belongsTo("App\Type");
     }
+
+    public function features()
+    {
+      return $this->hasMany(Feature::Class);
+    }
+
+    public function rooms()
+    {
+      return $this->hasMany(Room::Class);
+    }
+
+    public function services()
+    {
+      return $this->hasMany(Service::Class);
+    }
+
+    public function gallery()
+    {
+      return $this->hasOne("App\Gallery");
+    } 
   
 }

@@ -21,10 +21,12 @@ class CreatePropertiesTable extends Migration
             $table->string('currency')->nullable();
             $table->string('price')->nullable();
             $table->string('address')->nullable();
+            $table->string('town')->nullable();
             $table->string('tips')->nullable();
             $table->string('description')->nullable();
-            $table->string('details', 1000)->nullable();
+            $table->string('full_description', 1000)->nullable();
             $table->string('link')->nullable();
+            $table->string('expenses')->nullable();
             $table->timestamps();
             
             $table->foreign('category_id')->references('id')->on('categories');

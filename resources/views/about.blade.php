@@ -1,26 +1,26 @@
 @extends('layouts.app')
 @section('content')
 <section>
-        <div id="intro" class="carousel slide" data-ride="carousel">
+        <div id="intro" class="carousel slide" data-ride="carousel" data-interval="3000">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                <img class="d-block w-100" src="/img/retiro.jpg" alt="Martín Ibarzábal Servicios Inombiliarios">
+                <img class="d-block w-100" src="/img/retiro.png" alt="Martín Ibarzábal Servicios Inombiliarios">
                     <div class="carousel-caption d-none d-md-block">
-                            <h2>Un lugar donde los valores no se negocian</h2>
+                            <h2 class="headlines">Un lugar donde los valores no se negocian</h2>
                             <a href="{{url('/contacto')}}" class="btn btn-cta btn-danger btn-lg"> Más información </a>
                     </div>
                 </div>
                 <div class="carousel-item">
-                <img class="d-block w-100" src="/img/colon.jpg" alt="Martín Ibarzábal Servicios Inombiliarios">
+                <img class="d-block w-100" src="/img/agira.png"alt="Martín Ibarzábal Servicios Inombiliarios">
                     <div class="carousel-caption d-none d-md-block">
-                            <h2>Te brindamos atención personalizada y de calidad </h2>
+                            <h2 class="headlines">Te brindamos atención personalizada y de calidad </h2>
                             <a href="{{url('/busqueda')}}" class="btn btn-cta btn-danger btn-lg"> Realizar búsqueda</a>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="/img/industrial.jpg" alt="Martín Ibarzábal Servicios Inombiliarios">
+                    <img class="d-block w-100" src="/img/guemes.png" alt="Martín Ibarzábal Servicios Inombiliarios">
                         <div class="carousel-caption d-none d-md-block">
-                            <h2>Contactános y encontrá la mejor opción para tu búsqueda</h2>
+                            <h2 class="headlines">Contactános y encontrá la mejor opción para tu búsqueda</h2>
                             <a href="{{url('/contacto')}}" class="btn btn-cta btn-danger btn-lg"> Quiero saber más </a>
                         </div>
                 </div>

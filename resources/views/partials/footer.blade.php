@@ -3,7 +3,7 @@
     <div class="row d-flex justify-content-between align-items-center">
 
         <div class="col-md-3 footer-item mb-4">
-            <img class="logo-footer" src="{{asset('img/logo.png')}}" alt="">
+            <img class="logo-footer" src="{{asset('img/logo4.png')}}" alt="">
         </div>
         <div class="col-md-3 footer-item mb-4">
             <a class="footer-item mb-2" href="tel:+5491166361321">Llamar ahora</a>
@@ -15,7 +15,7 @@
             <a target="_blank" class="icon-social-footer" href="mailto:info@ibarzabal.com"><span class="icon-google icon-social-footer"></span></a>
         </div>
 
-        <div class="col-md-4 footer-item martillero mb-4">
+        <div class="d-none d-lg-block col-md-4 footer-item martillero mb-4">
             Martin Ibarzábal <br> Colegio Profesional Inmobiliario (C.A.B.A) Mat. 661.<br> Colegio de Martilleros y Corredores Públicos de San Isidro. Mat. 4830.
         </div>
 

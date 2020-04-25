@@ -10,13 +10,13 @@
                                 <h2>Propiedades</h2>
                             </div> --}}
                             
-                            <form action="{{url('properties')}}" method="post" enctype="multipart/form-data">
+                            <form action="{{url('propiedades')}}" method="post" enctype="multipart/form-data">
                                     @csrf
                                 <div class="col-12 border rounded p-3 mb-3">
                                     <div class="row">
                                         {{-- IMAGEN --}}
                                         <div class="col-4">
-                                            <img class="imagen-propiedad" src="/img/logo-casa.png" alt="" id="imgclick"><br>
+                                            <img class="imagen-formularios" src="/img/logo-casa.png" alt="" id="imgclick"><br>
                                             <div class="border rounded mt-2" id="info">Cargar imagen</div>
                                             {{-- <a class="btn btn-link" href="">Cargar imagen</a> --}}
                                             {{-- <label class="imagen btn btn-link" id="img" for="img"><p class="editar-avatar">Cargar imagen</p></label> --}}
@@ -65,50 +65,246 @@
                                                     </div>       
                                             </div>
 
-                                        <input class="form-control @error('price') is-invalid @enderror h4 border rounded  py-1" type="text" name="price" placeholder="Precio" value="{{old('price')}}">
-                                                @error('price')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror  
-                                            <input class="form-control @error('currency') is-invalid @enderror h4 border rounded  py-1" type="text" name="currency" placeholder="Moneda" value="{{old('currency')}}">
-                                                @error('currency')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror  
-                                            <input class="form-control @error('address') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Ubicación" name="address" value="{{old('address')}}"> 
-                                                @error('address')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror  
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <input class="form-control @error('currency') is-invalid @enderror h4 border rounded  py-1" type="text" name="currency" placeholder="Moneda" value="{{old('currency')}}">
+                                                        @error('currency')
+                                                            <span class="invalid-feedback" role="alert">
+                                                                <strong>{{ $message }}</strong>
+                                                            </span>
+                                                        @enderror 
+                                                </div> 
+                                                <div class="col-6">
+                                                        <input class="form-control @error('price') is-invalid @enderror h4 border rounded  py-1" type="text" name="price" placeholder="Precio" value="{{old('price')}}">
+                                                            @error('price')
+                                                                <span class="invalid-feedback" role="alert">
+                                                                    <strong>{{ $message }}</strong>
+                                                                </span>
+                                                            @enderror  
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <input class="form-control @error('address') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Dirección" name="address" value="{{old('address')}}"> 
+                                                        @error('address')
+                                                            <span class="invalid-feedback" role="alert">
+                                                                <strong>{{ $message }}</strong>
+                                                            </span>
+                                                        @enderror  
+                                                </div>
+                                                <div class="col-6">
+                                                    <input class="form-control @error('town') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Localidad" name="town" value="{{old('town')}}"> 
+                                                    @error('town')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror 
+                                                </div>
+                                            </div>
+
+
+
+
+
+
+
+
+
                                             <input class="form-control @error('tips') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Tips" name="tips" {{old('tips')}}>
                                                 @error('tips')
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $message }}</strong>
                                                     </span>
                                                 @enderror
-                                            <textarea rows="5" cols="50" class="form-control @error('description') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Descripción" name="description"> {{old('description')}} </textarea>
+                                            <textarea rows="5" cols="50" class="form-control @error('description') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Descripción" name="description"></textarea>
                                                 @error('description')
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $message }}</strong>
                                                     </span>
                                                 @enderror  
-
-                                                {{-- <input class="form-control @error('details') is-invalid @enderror h4 border rounded py-1" type="textarea" placeholder="Detalles" name="details">
-                                                @error('details')
+                                            <input class="form-control @error('link') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Link ZonaProp" name="link" value="{{old('link')}}">
+                                                @error('link')
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $message }}</strong>
                                                     </span>
-                                                @enderror   --}}
+                                                @enderror  
+                                    
+                                            <div class="h5 my-3 titulo-servicios">
+                                                Detalles adicionales
+                                            </div>
+                                            <textarea rows="10" cols="80" class="form-control @error('full_description') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Descripción extendida" name="full_description"></textarea>
+                                                @error('full_description')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror  
+                                            
+                                            <div class="h6">
+                                                    Características
+                                            </div>
+                                            
+                                            <div class="row justify-content-between mx-1">
+                                                
+                                                <input class="col-3 form-control @error('features[]') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Característica 1" name="features[]" value="{{old('features[]')}}">
+                                                @error('features[]')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror  
+                                                <input class="col-3 form-control @error('features[]') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Característica 2" name="features[]" value="{{old('features[]')}}">
+                                                @error('features[]')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror  
+                                                <input class="col-3 form-control @error('features[]') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Característica 3" name="features[]" value="{{old('features[]')}}">
+                                                @error('features[]')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror  
+                                            </div>
 
-                                            <input class="form-control @error('link') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Link ZonaProp" name="link" value="{{old('link')}}">
-                                            @error('link')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror  
+                                            <div class="row justify-content-between mx-1">
+                                                
+                                                    <input class="col-3 form-control @error('features[]') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Característica 4" name="features[]" value="{{old('features[]')}}">
+                                                    @error('features[]')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror  
+                                                    <input class="col-3 form-control @error('features[]') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Característica 5" name="features[]" value="{{old('features[]')}}">
+                                                    @error('features[]')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror  
+                                                    <input class="col-3 form-control @error('features[]') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Característica 6" name="features[]" value="{{old('features[]')}}">
+                                                    @error('features[]')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror  
+                                            </div>
+                                                 
+                                                
+                                            <div class="h6">
+                                                    Ambientes
+                                            </div>
+                                            <div class="row justify-content-between mx-1">
+                                            
+                                                <input class="col-3 form-control @error('rooms') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Ambiente 1" name="rooms[]" value="">
+                                                    @error('rooms')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror  
+                                                    <input class="col-3 form-control @error('rooms') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Ambiente 2" name="rooms[]" value="">
+                                                    @error('rooms')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror  
+                                                    <input class="col-3 form-control @error('rooms') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Ambiente 3" name="rooms[]" value="">
+                                                    @error('rooms')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror  
+                                            </div>
+                                            <div class="row justify-content-between mx-1">
+                                                    <input class="col-3 form-control @error('rooms') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Ambiente 4" name="rooms[]" value="">
+                                                    @error('rooms')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror  
+                                                    <input class="col-3 form-control @error('rooms') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Ambiente 5" name="rooms[]" value="">
+                                                    @error('rooms')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror  
+                                                    <input class="col-3 form-control @error('rooms') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Ambiente 6" name="rooms[]" value="">
+                                                    @error('rooms')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror  
+                                            </div>
+
+                                            
+                                            <div class="h6">
+                                                    Servicios
+                                            </div>
+
+                                            <div class="row justify-content-between mx-1">
+                                            
+                                            
+                                                    <input class="col-3 form-control @error('services') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Servicio 1" name="services[]" value="{{old('services')}}">
+                                                    @error('services')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror 
+                                                    <input class="col-3 form-control @error('services') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Servicio 2" name="services[]" value="{{old('services')}}">
+                                                    @error('services')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror 
+                                                    <input class="col-3 form-control @error('services') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Servicio 3" name="services[]" value="{{old('services')}}">
+                                                    @error('services')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror 
+                                            </div>
+                                           
+                                            <div class="row justify-content-between mx-1">
+                                            
+                                                    <input class="col-3 form-control @error('services') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Servicio 4" name="services[]" value="{{old('services')}}">
+                                                    @error('services')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror 
+                                                    <input class="col-3 form-control @error('services') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Servicio 5" name="services[]" value="{{old('services')}}">
+                                                    @error('services')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror 
+                                                    <input class="col-3 form-control @error('services') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Servicio 6" name="services[]" value="{{old('services')}}">
+                                                    @error('services')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror 
+                                            </div>
+
+                                                {{-- <div id="root">
+                                                    <input type="text" id="input" v-model="newService">
+                                                    <div class="row ml-1 my-2">
+                                                        <button :title="title" :disabled="newService === ''" @click="addService">Agregar Servicio</button>
+                                                    </div>
+                                                    <input class="@error('services') is-invalid @enderror mr-2 my-2 border-0" disabled name="services[]" v-for="service in services" :value="service">
+                                                    @error('services')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                    @enderror  
+                                
+                                                </div> --}}
+
+
+               
+                                                
+                                    
+                                              
+
+                
                                             
                                             <div class="col-12 d-flex justify-content-end align-self-end"> 
                                                 <input class="btn btn-link" type="submit" value="Guardar">

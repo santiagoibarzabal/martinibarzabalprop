@@ -17,13 +17,13 @@
                                 <ul class="list-unstyled">
                                     @foreach($categories as $category)
                                         <li>
-                                            <a class="link-filtro" href="{{url('/properties/find/' . $category->id)}}">
+                                            <a class="link-filtro" href="{{route('filtro', [strtolower(str_replace(" ","-",$category->name)), $category->id])}}">
                                                 {{$category->name}}
                                             </a>
                                         </li>
                                     @endforeach
                                     <li>
-                                        <a class="link-filtro" href="{{url('/properties')}}">
+                                        <a class="link-filtro" href="{{url('/propiedades')}}">
                                             Ver Todo
                                         </a>
                                     </li>
@@ -50,10 +50,10 @@
 
                         <div class="row d-flex justify-content-center">
                         @if(isset(auth()->user()->role_id) && auth()->user()->role_id == '1')
-                                <a class="btn btn-link link-filtro ml-2 mt-4" href="{{url('properties/list')}}">
+                                <a class="btn btn-link link-filtro ml-2 mt-4" href="{{url('propiedades/list')}}">
                                     Modificar listado de Propiedades
                                 </a>
-                                <a class="btn btn-link link-filtro ml-2 mt-4" href="{{url('properties/new')}}">
+                                <a class="btn btn-link link-filtro ml-2 mt-4" href="{{url('propiedades/new')}}">
                                     Agregar nueva propiedad
                                 </a>
                         @endif
@@ -67,20 +67,20 @@
                                 <h2>Propiedades</h2>
                             </div> --}}
                             
-                            @foreach ($properties as $property)      
+                            @forelse ($properties as $property)      
 
                                 <div class="col-12 border rounded p-3 mb-3">
                                     <div class="row">
                                         <div class="col-4 mx-2">
-                                            <a target="_blank" href="{{$property->link}}"><img class="imagen-propiedad" id="imagen-propiedad" src="{{Storage::url($property->image)}}" alt=""></a>
-                                            <a target="_blank" href="{{$property->link}}" class="imagen-propiedad btn btn-link mt-4">Más info</a>
-                                            <a target="_blank" href="{{url('contacto')}}" class="imagen-propiedad btn btn-link mt-2">Consulta escrita</a>
-                                            <a target="_blank" href="tel:+549116636131" class="imagen-propiedad btn btn-link mt-2">Llamar</a>
+                                            <a href="{{url('propiedades/'.$property->id)}}"><img class="imagen-propiedad" id="imagen-propiedad" src="{{Storage::url($property->image)}}" alt=""></a>
+                                            <a href="{{url('propiedades/'.$property->id)}}" class="w-100 btn btn-link mt-4">Más info</a>
+                                            {{-- <a href="{{url('contacto')}}" class="w-100 btn btn-link mt-2">Consulta escrita</a> --}}
+                                            <a target="_blank" href="tel:+5491166361321" class="w-100 btn btn-link mt-2">Llamar</a>
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-7">
                                             <h4 class="precio-propiedad border rounded px-1 py-1">{{$property->type->name}} - {{$property->currency}} {{$property->price}}</h4>
-                                            <h4 class="tipo-propiedad"><a target="_blank" href="{{$property->link}}">{{$property->category->name}}</a></h4>
-                                            <h4 class="descripcion-propiedad">{{$property->address}}</h4>
+                                            <h4 class="tipo-propiedad"><a href="{{url('propiedades/'.$property->id)}}">{{$property->category->name}}</a></h4>
+                                            <h4 class="descripcion-propiedad">{{$property->address}} - {{$property->town}}</h4>
                                             <h5 class="tips-propiedad">{{$property->tips}}</h4>
                                             <div class="row">
                                                 <div class="col-12">
@@ -90,8 +90,9 @@
                                         </div>
                                     </div>
                                 </div>
-
-                            @endforeach
+                            @empty
+                                <div class="h5 titulo-servicios mt-4">No encontramos una propiedad de este tipo</div>    
+                            @endforelse
 
 
                         </div>    

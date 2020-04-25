@@ -18,6 +18,13 @@ class CreateTypesTable extends Migration
             $table->string('name')->nullable();
             $table->timestamps();
         });
+
+        DB::table('types')->insert(
+            array(
+                ['id' => 1, 'name' =>'Venta'],
+                ['id' => 2, 'name' =>'Alquiler'],
+            )
+        );
     }
 
     /**

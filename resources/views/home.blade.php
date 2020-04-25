@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mt-4">
         <div class="">
             <div class="card">
                 <div class="card-header">Bienvenido</div>
@@ -19,12 +19,12 @@
 
                 <div class="row">
                     <button class="btn btn-ibarzabal m-4">
-                        <a href="{{url('properties/new')}}">
+                        <a href="{{url('propiedades/new')}}">
                             {{ __('Insertar nueva propiedad') }}
                         </a>
                     </button>
                     <button class="btn btn-ibarzabal m-4">
-                            <a href="{{url('properties/list')}}">
+                            <a href="{{url('propiedades/list')}}">
                                 {{ __('Listado de Propiedades') }}
                             </a>
                         </button>

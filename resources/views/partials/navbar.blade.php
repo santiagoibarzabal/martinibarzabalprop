@@ -3,7 +3,7 @@
         <nav class="">
             <div class="row d-flex justify-content-center align-items-center m-2">
                     <div class="d-none d-lg-block col-lg-2 d-flex justify-content-center">
-                             <a href=""><img class="logo-navbar" src="{{asset('img/logo.png')}}" alt=""> </a>
+                             <a href=""><img class="logo-navbar" src="{{asset('img/logo4.png')}}" alt=""> </a>
                      </div>
                     <div class="d-none d-lg-block col-md-2 navbar-item">
                         <li>
@@ -12,7 +12,7 @@
                     </div>
                     <div class="d-none d-lg-block col-md-2 navbar-item">
                             <li>
-                                <a class="navbar-link" href="{{url('/properties')}}"> Propiedades </a>
+                                <a class="navbar-link" href="{{url('/propiedades')}}"> Propiedades </a>
                             </li>
                         </div>
 
@@ -56,7 +56,7 @@
                             Menú
                             </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="navbar-link dropdown-item" href="{{url('/properties')}}"> Propiedades </a>
+                                    <a class="navbar-link dropdown-item" href="{{url('/propiedades')}}"> Propiedades </a>
                                     <a class="navbar-link dropdown-item" href="{{url('/')}}"> Nosotros </a>
                                     <a class="navbar-link dropdown-item" href="{{url('/tasaciones')}}"> Tasación </a>
                                     <a class="navbar-link dropdown-item" href="{{url('/busqueda')}}"> Búsqueda </a>
