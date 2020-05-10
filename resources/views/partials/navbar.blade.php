@@ -62,9 +62,10 @@
                             </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="navbar-link dropdown-item" href="{{url('/propiedades')}}"> Propiedades </a>
-                                    <a class="navbar-link dropdown-item" href="{{url('/')}}"> Nosotros </a>
+                                    <a class="navbar-link dropdown-item" href="{{url('/')}}"> Servicios </a>
                                     <a class="navbar-link dropdown-item" href="{{url('/tasaciones')}}"> Tasación </a>
                                     <a class="navbar-link dropdown-item" href="{{url('/busqueda')}}"> Búsqueda </a>
+                                    <a class="navbar-link dropdown-item" href="{{url('/nosotros')}}"> Nosotros </a>
                                     <a class="navbar-link dropdown-item" href="{{url('/contacto')}}"> Contacto </a>
                                 </div>
                         </li>

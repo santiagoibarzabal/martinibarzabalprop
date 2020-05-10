@@ -12,7 +12,7 @@
             
                
             <div class="row formulario-contacto d-flex justify-content-center">
-                <form method="post" action="{{url('contacto')}}" class="col-4 mb-4">
+                <form method="post" action="{{url('contacto')}}" class="col-10 col-md-4 mb-4">
                     @csrf
                     <div class="form-group">
                          <input class="form-control" type="text" id="name" name="name" placeholder="Nombre"> 

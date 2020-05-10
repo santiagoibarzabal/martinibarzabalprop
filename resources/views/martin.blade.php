@@ -9,7 +9,7 @@
             Martín Ibarzábal
         </div>
         <div class="row d-flex justify-content-center mt-4">
-            <div class="col-6">
+            <div class="col-9 col-md-6">
                 <ul class="list-unstyled h5">
                     <li>
                         Corredor Inmobiliario <br> Matricula Provincia de Buenos Aires CMCPSI nº 4830 <br>
