@@ -315,16 +315,11 @@ class PropertiesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($slug)
     {
-       $property = Property::find($id);
+        $property = Property::where('slug','=', $slug)->firstOrFail();
 
-    //    $property->features()->delete();
-    //    $property->rooms()->delete();
-    //    $property->services()->delete();
-    //    $property->gallery()->delete();
-
-       $property->delete();
+        $property->delete();
 
        return redirect('/propiedades');
     }

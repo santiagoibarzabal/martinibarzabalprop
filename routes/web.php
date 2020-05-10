@@ -43,7 +43,7 @@ Route::get('/propiedades/{id}/edit', 'PropertiesController@edit');
 
 Route::patch('/propiedades/{id}', 'PropertiesController@update');
 
-Route::delete('/propiedades/{id}', 'PropertiesController@destroy');
+Route::delete('/propiedades/{slug}', 'PropertiesController@destroy');
 
 });
 
