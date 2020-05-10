@@ -79,4 +79,7 @@ Route::post('/busqueda', 'SearchsController@store');
 Route::get('/tasaciones', 'PricingsController@create');
 Route::post('/tasaciones', 'PricingsController@store');
 
-
+// Storage Link 
+Route::get('/linkstorage', function () {
+    Artisan::call('storage:link')
+});
