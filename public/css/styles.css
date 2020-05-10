@@ -134,14 +134,16 @@ hr {
 
 /* NOSOTROS */
 
-.carousel-caption h2{
-  font-size: 5rem;
+.carousel-caption h2,
+.headlines {
+  font-size: 3.5rem;
   text-align: center;
   font-family: 'Oswald', sans-serif;
   -webkit-text-stroke: 2px black;
   color: white;
   position: absolute;
-    bottom:90vh;
+  bottom:50vh;
+  
 }
 
 
@@ -150,8 +152,7 @@ hr {
   color: #fff;
   width: 20%;
   position: relative;
-    bottom: 70vh;
-    right: 15px;
+    bottom: 35vh;
 }
 
 .logo {
@@ -382,4 +383,17 @@ input#image {
       opacity: 1;
     }
 
+  }
+
+
+  @media only screen and (min-width: 1250px) {
+    .carousel-caption h2{
+      position: absolute;
+        bottom:90vh;
+    }
+    .btn-cta{
+      position: relative;
+        bottom: 70vh;
+        right: 15px;
+    }
   }
