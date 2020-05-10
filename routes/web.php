@@ -81,5 +81,5 @@ Route::post('/tasaciones', 'PricingsController@store');
 
 // Storage Link 
 Route::get('/linkstorage', function () {
-    Artisan::call('storage:link')
+    Artisan::call('storage:link');
 });
