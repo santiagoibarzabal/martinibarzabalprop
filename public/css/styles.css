@@ -386,7 +386,7 @@ input#image {
   }
 
 
-  @media only screen and (min-width: 1250px) {
+  @media only screen and (min-width: 1300px) {
     .carousel-caption h2{
       font-size: 5rem;
       position: absolute;
