@@ -51,43 +51,46 @@
                     </div>
 
                     <div class="col-md-8 d-flex justify-content-center align-items-start p-4">
-                        <div class="row">
+                        <div class="row d-flex justify-content-center text-center text-md-left">
                             {{-- <div class="col-12">
                                 <h2>Propiedades</h2>
                             </div> --}}
                           
 
-                                <div class="col-12 border rounded p-3 mb-3">
-                                    <div class="row">
-                                        <div class="col-4 mx-2">
-                                        <a href="{{url('propiedades/'.$property->slug)}}"><img class="imagen-propiedad" id="imagen-propiedad" src="{{Storage::url($property->image)}}" alt="{{$property->alt_text}}"></a>
-                                            <a target="_blank" href="https://www.zonaprop.com.ar/propiedades/piso-alto-160-m-sup2--con-aire-acondicionado-central-45578250.html#&gid=1&pid=1" class="w-100 btn btn-link mt-4">Ver Fotos (Zona Prop)</a>
-                                            {{-- <a target="_blank" href="{{url('contacto')}}" class="imagen-propiedad btn btn-link mt-2">Consulta escrita</a> --}}
-                                            <a target="_blank" href="tel:+5491166361321" class="w-100 btn btn-link mt-2">Llamar</a>
-                                            @if(isset(auth()->user()->role_id) && auth()->user()->role_id == '1')
-                                            <a href="{{url('propiedades/' . $property->id . '/edit')}}" class="w-100 btn btn-link mt-2">Modificar propiedad</a>
-                                            @endif
-                                        </div>
-                                        <div class="col-7">
-                                            <h4 class="precio-propiedad border rounded px-1 py-1">{{$property->type->name}} - {{$property->currency}} {{$property->price}}</h4>
-                                            <h4 class="tipo-propiedad"><a href="{{url('propiedades/'.$property->slug)}}">{{$property->category->name}}</a></h4>
-                                            <h4 class="descripcion-propiedad">{{$property->address}} - {{$property->town}}</h4>
-                                            <h5 class="tips-propiedad">{{$property->tips}}</h4>
-                                            <div class="row">
-                                                <div class="col-12 mb-2">
-                                                    @if(isset($property->full_description))
-                                                    {{$property->full_description}} 
-                                                    @else
-                                                    {{$property->description}}
-                                                    @endif
-                                                </div>
+                            <div class="col-8 col-md-12 border rounded p-3 mb-3">
+                                <div class="row">
+                                    <div class="col-0 col-4 mx-2">
+                                    <a href="{{url('propiedades/'.$property->slug)}}"><img class="d-none d-md-block imagen-propiedad" src="{{Storage::url($property->image)}}" alt="{{$property->alt_text}}"></a>
+                                        <a target="_blank" href="https://www.zonaprop.com.ar/propiedades/piso-alto-160-m-sup2--con-aire-acondicionado-central-45578250.html#&gid=1&pid=1" class="d-none d-md-block w-100 btn btn-link mt-4">Ver Fotos (Zona Prop)</a>
+                                        {{-- <a target="_blank" href="{{url('contacto')}}" class="imagen-propiedad btn btn-link mt-2">Consulta escrita</a> --}}
+                                        <a target="_blank" href="tel:+5491166361321" class="d-none d-md-block w-100 btn btn-link mt-2">Llamar</a>
+                                        @if(isset(auth()->user()->role_id) && auth()->user()->role_id == '1')
+                                        <a href="{{url('propiedades/' . $property->id . '/edit')}}" class="d-none d-md-block w-100 btn btn-link mt-2">Modificar propiedad</a>
+                                        @endif
+                                    </div>
+                                    <div class="col-12 col-md-7">
+                                        <h4 class="precio-propiedad border rounded px-1 py-1">{{$property->type->name}} - {{$property->currency}} {{$property->price}}</h4>
+                                        <a href="{{url('propiedades/'. $property->slug)}}"><img class="d-md-none imagen-propiedad" src="{{Storage::url($property->image)}}" alt="{{$property->alt_text}}"></a>
+                                        <h4 class="tipo-propiedad"><a href="{{url('propiedades/'.$property->slug)}}">{{$property->category->name}}</a></h4>
+                                        <h4 class="descripcion-propiedad">{{$property->address}} - {{$property->town}}</h4>
+                                        <h5 class="tips-propiedad">{{$property->tips}}</h4>
+                                        <div class="row">
+                                            <div class="col-12 mb-2">
+                                                @if(isset($property->full_description))
+                                                {{$property->full_description}} 
+                                                @else
+                                                {{$property->description}}
+                                                @endif
                                             </div>
-                                            
-
-                               
-
-                        </div>    
-                    </div>
+                                        </div>
+                                        <a target="_blank" href="https://www.zonaprop.com.ar/propiedades/piso-alto-160-m-sup2--con-aire-acondicionado-central-45578250.html#&gid=1&pid=1" class="d-md-none w-100 btn btn-link mt-4">Ver Fotos (Zona Prop)</a>
+                                        {{-- <a target="_blank" href="{{url('contacto')}}" class="imagen-propiedad btn btn-link mt-2">Consulta escrita</a> --}}
+                                        <a target="_blank" href="tel:+5491166361321" class="d-md-none w-100 btn btn-link mt-2">Llamar</a>
+                                        @if(isset(auth()->user()->role_id) && auth()->user()->role_id == '1')
+                                        <a href="{{url('propiedades/' . $property->id . '/edit')}}" class="d-md-none w-100 btn btn-link mt-2">Modificar propiedad</a>
+                                        @endif
+                                </div>    
+                            </div>
 
 
                     {{-- <div class="row mt-4">

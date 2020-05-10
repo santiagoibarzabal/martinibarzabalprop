@@ -63,27 +63,28 @@
                
 
                     <div class="col-md-8 d-flex justify-content-center align-items-start p-4">
-                        <div class="row">
+                        <div class="row d-flex justify-content-center text-center text-md-left">
                             {{-- <div class="col-12">
                                 <h2>Propiedades</h2>
                             </div> --}}
                             
                             @forelse ($properties as $property)      
 
-                                <div class="col-12 border rounded p-3 mb-3">
+                                <div class="col-8 col-md-12 border rounded p-3 mb-3">
                                     <div class="row">
-                                        <div class="col-4 mx-2">
-                                        <img class="imagen-propiedad" id="imagen-propiedad" src="{{Storage::url($property->image)}}" alt="{{$property->alt_text}}">
-                                            <a href="{{url('propiedades/' . $property->id . '/edit')}}" class="w-100 btn btn-link mt-4">Modificar</a>
-                                            <form action="{{ url('/propiedades'.'/'.$property->slug) }}" method="POST">
+                                        <div class="col-0 col-4 mx-2">
+                                        <img class="d-none d-md-block imagen-propiedad" src="{{Storage::url($property->image)}}" alt="{{$property->alt_text}}">
+                                            <a href="{{url('propiedades/' . $property->id . '/edit')}}" class="d-none d-md-block w-100 btn btn-link mt-4">Modificar</a>
+                                            <form class="d-none d-md-block" action="{{ url('/propiedades'.'/'.$property->slug) }}" method="POST">
                                                 @method('delete')
                                                 @csrf
                                                 <button type="submit" class="w-100 btn btn-link mt-2">Eliminar</button>
                                               </form>
                                             
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-12 col-md-7">
                                             <h4 class="precio-propiedad border rounded px-1 py-1">{{$property->type->name}} - {{$property->currency}} {{$property->price}}</h4>
+                                            <a href="{{url('propiedades/'. $property->slug)}}"><img class="d-md-none imagen-propiedad" src="{{Storage::url($property->image)}}" alt="{{$property->alt_text}}"></a>
                                             <h4 class="tipo-propiedad">{{$property->category->name}}</h4>
                                             <h4 class="descripcion-propiedad">{{$property->address}} - {{$property->town}}</h4>
                                             <h5 class="tips-propiedad">{{$property->tips}}</h4>
@@ -92,6 +93,12 @@
                                                     {{$property->description}}
                                                 </div>
                                             </div>
+                                            <a href="{{url('propiedades/' . $property->id . '/edit')}}" class="d-md-none w-100 btn btn-link mt-4">Modificar</a>
+                                            <form class="d-md-none" action="{{ url('/propiedades'.'/'.$property->slug) }}" method="POST">
+                                                @method('delete')
+                                                @csrf
+                                                <button type="submit" class="w-100 btn btn-link mt-2">Eliminar</button>
+                                              </form>
                                         </div>
                                     </div>
                                 </div>
