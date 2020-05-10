@@ -3,10 +3,10 @@
     <div class="row d-flex justify-content-between align-items-center">
 
         <div class="col-md-3 footer-item mb-4">
-            <img class="logo-footer" src="{{asset('img/logo4.png')}}" alt="">
+            <img class="logo-footer" src="{{asset('img/logo4.png')}}" alt="Logo - Ibarzabal servicios inmobiliarios">
         </div>
-        <div class="col-md-3 footer-item mb-4">
-            <a class="footer-item mb-2" href="tel:+5491166361321">Llamar ahora</a>
+        <div class="col-md-3 footer-item call mb-4">
+            <a class="footer-item btn btn-md btn-blue text-white mb-2 px-2" href="tel:+5491166361321">Llamar al <br> 11-6636-1321</a>
         </div>
 
         <div class="d-flex justify-content-end col-md-2 footer-item d-flex justify-content-center mb-4">

@@ -8,7 +8,7 @@ class Property extends Model
 {
 
     protected $fillable = [
-       'category_id', 'type_id', 'image', 'currency', 'price', 'address', 'town', 'tips', 'description','full_description','link','features','rooms','services'
+       'category_id', 'type_id', 'image', 'currency', 'price', 'address', 'town', 'tips', 'description','full_description','link','features','rooms','services', 'expenses', 'alt_text', 'slug',
     ];
     
     public function user()

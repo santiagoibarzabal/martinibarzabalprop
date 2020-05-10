@@ -27,6 +27,8 @@ class CreatePropertiesTable extends Migration
             $table->string('full_description', 1000)->nullable();
             $table->string('link')->nullable();
             $table->string('expenses')->nullable();
+            $table->string('alt_text')->nullable();
+            $table->string('slug')->unique()->nullable();
             $table->timestamps();
             
             $table->foreign('category_id')->references('id')->on('categories');

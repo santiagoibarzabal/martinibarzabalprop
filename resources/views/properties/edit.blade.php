@@ -27,6 +27,13 @@
                                                             <strong>{{ $message }}</strong>
                                                         </span>
                                                 @enderror   
+                                            
+                                            <input class="form-control mt-4 @error('alt_text') is-invalid @enderror" type="text" name="alt_text" value="{{$property->alt_text}}" id="alt_text" placeholder="Texto Alternativo">
+                                            @error('alt_text')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                            @enderror   
                                         </div>
                                         
                                         <div class="col-8">
@@ -118,7 +125,7 @@
                                                         <strong>{{ $message }}</strong>
                                                     </span>
                                                 @enderror
-                                            <textarea rows="5" cols="50" class="form-control @error('description') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Descripción" name="description">{{$property->description}}</textarea>
+                                            <textarea rows="3" cols="50" class="form-control @error('description') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Descripción" name="description">{{$property->description}}</textarea>
                                                 @error('description')
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $message }}</strong>
@@ -134,14 +141,14 @@
                                             <div class="h5 my-3 titulo-servicios">
                                                 Detalles adicionales
                                             </div>
-                                            <textarea rows="10" cols="80" class="form-control @error('full_description') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Descripción extendida" name="full_description">{{$property->full_description}}</textarea>
+                                            <textarea rows="4" cols="80" class="form-control @error('full_description') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Descripción extendida" name="full_description">{{$property->full_description}}</textarea>
                                                 @error('full_description')
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $message }}</strong>
                                                     </span>
                                                 @enderror  
 
-                                                <div class="h6 font-weight-bold">
+                                                {{-- <div class="h6 font-weight-bold">
                                                         Características
                                                 </div>
                                                 
@@ -217,7 +224,7 @@
                                                             @enderror  
                                                         @endif
                                                         @endfor
-                                                </div>
+                                                </div> --}}
                 
                                             
                                             <div class="col-12 d-flex justify-content-end align-self-end"> 

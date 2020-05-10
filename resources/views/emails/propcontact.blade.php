@@ -7,6 +7,7 @@ Te estaremos escribiendo con más información sobre esta propiedad.
 Hemos recibido la siguiente consulta:
 
 - Email: {{$email->email}}
+- Celular: {{$email->phone}}
 - Mensaje: {{$email->question}}
 
 ¡Muchas gracias por tu interés! 

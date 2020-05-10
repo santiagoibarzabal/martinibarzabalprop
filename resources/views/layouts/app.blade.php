@@ -4,8 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    {{-- SEO --}}
+
+    <link rel="canonical" href="https://www.ibarzabal.com/" />
+    <meta name="description" content=" Encontrá la propiedad en Venta y Alquiler que estás buscando. Tasaciones y búsquedas especializadas de departamentos, casas, oficinas, inmuebles industriales y terrenos en Zona Norte. Tu próxima Propiedad está Martin Ibarzabal Servicios Inmobiliarios." />
+    <meta name="keywords" content="Propiedades, inmuebles, casas, departamentos, barrios cerrados, alquiler, venta, compra, alquiler temporario, argentina. Casas y Departamentos, inmuebles, propiedades, Venta y Alquiler, Argentina">
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Martīn Ibarzábal : Real Estate, Properties for Sale &amp; Mercado Inmobiliario, propiedades en venta y alquiler, Martilleros, Formar parte del equipo" />
+    <meta property="og:description" content="{seo: SiteName} puede ayudarlo su búsqueda o necesidad inmobiliaria, ya sea para comprar, alquilar o vender una propiedad. Para encontrar la solución que necesita contáctese con {seo: SiteName} hoy para encontrar lo qué está buscando" />
+    <meta property="og:url" content="https://www.ibarzabal.com" />
+    <meta property="og:image" content="{{asset('img/logo.png')}}" />
+    <meta property="og:site_name" content="Martin Ibarzabal Servicios Inmobiliarios" />
     
-    <title> @yield('title', 'Servicios Inmobiliarios | Martín Ibarzábal') </title>
+    <title> @yield('title', 'Venta y Alquiler de Propiedades | Ibarzabal Servicios Inmobiliarios') </title>
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/styles.css')}}">
@@ -18,8 +31,6 @@
     <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One|Rubik:700&display=swap" rel="stylesheet">
    
     <link rel="shortcut icon" href="{{asset('img/logo.png')}}" type="image/x-icon">
-
-    <meta name="description" content="Encontrá la propiedad que estás buscando. Tasaciones y búsquedas especializadas de departamentos, casas, oficinas, inmuebles industriales y terrenos">
 
 </head>
 <body>

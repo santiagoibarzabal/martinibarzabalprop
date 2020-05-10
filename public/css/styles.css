@@ -22,8 +22,6 @@
 
 .logo-navbar {
     height: 50px;
-    margin: 0px 0px;
-    padding: 0px 0px;
   }
 
 .quit {
@@ -72,6 +70,11 @@ footer {
     color: #ab2121;
 }
 
+.call a { 
+  color: white;
+  font-size: 1rem;
+}
+
 .logo-footer {
     height: 60px;
 }
@@ -100,6 +103,23 @@ footer {
   font-size: 35px;
   color: #22358d;
   padding-left: 5px;
+}
+
+.btn-blue{
+  background-color: #22358d;
+  
+  color: white;
+}
+
+.btn-blue a{
+  text-decoration: none;
+  color: white; 
+}
+
+.btn-blue:hover{
+  color:white;
+  opacity: .7;
+  text-decoration: none;
 }
 
 /* Linea ABOUT*/
@@ -311,6 +331,10 @@ input#image {
   color:rgba(0,0,0,0.6);
 }
 
+.formprop {
+  margin-bottom: .3rem
+}
+
 
 /* HOME / INICIO DE SESION */
 
@@ -330,6 +354,8 @@ input#image {
   opacity: .7;
   text-decoration: none;
 }
+
+
 
 /* Imagenes */
 .show-images{

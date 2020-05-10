@@ -28,12 +28,6 @@ Route::get('/propiedades', 'PropertiesController@index');
 
 Route::get('/propiedades/buscar/{name?}/{id?}', 'PropertiesController@find')->name('filtro');
 
-// Galeria
-
-// Route::get('/galeria', 'GalleriesController@index');
-// Route::get('/galerias/agregar', 'GalleriesController@create');
-// Route::post('/galerias', 'GalleriesController@store');
-
 
 // Propiedades con AUTH
 
@@ -53,7 +47,7 @@ Route::delete('/propiedades/{id}', 'PropertiesController@destroy');
 
 });
 
-Route::get('/propiedades/{id}', 'PropertiesController@show')->name('prop');
+Route::get('/propiedades/{slug}', 'PropertiesController@show')->name('prop');
 
 Route::post('/propiedades/{id}', 'PropformController@store');
 
@@ -62,8 +56,12 @@ Route::post('/propiedades/{id}', 'PropformController@store');
 
 // NOSOTROS
 
-Route::get('/nosotros', function () {
+Route::get('/servicios', function () {
     return view('/about');
+});
+
+Route::get('/nosotros', function () {
+    return view('/martin');
 });
 
 // CONTACTO

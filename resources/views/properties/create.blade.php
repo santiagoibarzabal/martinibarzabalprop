@@ -14,7 +14,7 @@
                                     @csrf
                                 <div class="col-12 border rounded p-3 mb-3">
                                     <div class="row">
-                                        {{-- IMAGEN --}}
+                                        {{-- alt_textN --}}
                                         <div class="col-4">
                                             <img class="imagen-formularios" src="/img/logo-casa.png" alt="" id="imgclick"><br>
                                             <div class="border rounded mt-2" id="info">Cargar imagen</div>
@@ -26,6 +26,15 @@
                                                             <strong>{{ $message }}</strong>
                                                         </span>
                                                 @enderror   
+
+                                                
+                                            <input class="form-control mt-4 @error('alt_text') is-invalid @enderror" type="text" name="alt_text" value="{{old('alt_text')}}" id="alt_text" placeholder="Texto Alternativo">
+                                            @error('alt_text')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                            @enderror   
+                                                
                                         </div>
                                         
                                         <div class="col-8">
@@ -117,7 +126,7 @@
                                                         <strong>{{ $message }}</strong>
                                                     </span>
                                                 @enderror
-                                            <textarea rows="5" cols="50" class="form-control @error('description') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Descripción" name="description"></textarea>
+                                            <textarea rows="3" cols="50" class="form-control @error('description') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Descripción" name="description"></textarea>
                                                 @error('description')
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $message }}</strong>
@@ -133,14 +142,14 @@
                                             <div class="h5 my-3 titulo-servicios">
                                                 Detalles adicionales
                                             </div>
-                                            <textarea rows="10" cols="80" class="form-control @error('full_description') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Descripción extendida" name="full_description"></textarea>
+                                            <textarea rows="4" cols="80" class="form-control @error('full_description') is-invalid @enderror h4 border rounded py-1" type="text" placeholder="Descripción extendida" name="full_description"></textarea>
                                                 @error('full_description')
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $message }}</strong>
                                                     </span>
                                                 @enderror  
                                             
-                                            <div class="h6">
+                                            {{-- <div class="h6">
                                                     Características
                                             </div>
                                             
@@ -282,7 +291,7 @@
                                                             <strong>{{ $message }}</strong>
                                                         </span>
                                                     @enderror 
-                                            </div>
+                                            </div> --}}
 
                                                 {{-- <div id="root">
                                                     <input type="text" id="input" v-model="newService">

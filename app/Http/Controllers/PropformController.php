@@ -45,12 +45,14 @@ class PropformController extends Controller
     {
         $this->validate($request,[
             'email' => 'required|email',
+            'phone' => 'required',
             'question' => 'required'
         ]);
 
         $email = new Contact;
         
         $email->email = request('email');
+        $email->phone = request('phone');
         $email->question = request('question');
 
         \Mail::to($email->email)->send(new Propiedad($email));

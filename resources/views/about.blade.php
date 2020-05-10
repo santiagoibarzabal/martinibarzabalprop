@@ -4,21 +4,21 @@
         <div id="intro" class="carousel slide" data-ride="carousel" data-interval="3000">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                <img class="d-block w-100" src="/img/retiro.png" alt="Martín Ibarzábal Servicios Inombiliarios">
+                <img class="d-block w-100" src="/img/retiro.png" alt="Martín Ibarzábal Servicios Inombiliarios - Retiro">
                     <div class="carousel-caption d-none d-md-block">
                             <h2 class="headlines">Un lugar donde los valores no se negocian</h2>
                             <a href="{{url('/contacto')}}" class="btn btn-cta btn-danger btn-lg"> Más información </a>
                     </div>
                 </div>
                 <div class="carousel-item">
-                <img class="d-block w-100" src="/img/agira.png"alt="Martín Ibarzábal Servicios Inombiliarios">
+                <img class="d-block w-100" src="/img/agira.png"alt="Martín Ibarzábal Servicios Inombiliarios - Agira">
                     <div class="carousel-caption d-none d-md-block">
                             <h2 class="headlines">Te brindamos atención personalizada y de calidad </h2>
                             <a href="{{url('/busqueda')}}" class="btn btn-cta btn-danger btn-lg"> Realizar búsqueda</a>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="/img/guemes.png" alt="Martín Ibarzábal Servicios Inombiliarios">
+                    <img class="d-block w-100" src="/img/guemes.png" alt="Martín Ibarzábal Servicios Inombiliarios - Guemes">
                         <div class="carousel-caption d-none d-md-block">
                             <h2 class="headlines">Contactános y encontrá la mejor opción para tu búsqueda</h2>
                             <a href="{{url('/contacto')}}" class="btn btn-cta btn-danger btn-lg"> Quiero saber más </a>
@@ -93,63 +93,63 @@
     <div class="row d-flex align-items-center mx-0 ml-4">
         {{-- Logo Agira --}}
         <div class="d-none d-lg-block col-3 col-md-2 col-lg-2 my-4">
-            <img class="logo" src="{{ asset('img/logo-agira.png')}}" alt="">
+            <img class="logo" src="{{ asset('img/logo-agira.png')}}" alt="Logo Agira - Ibarzabal Servicios Inmobiliarios">
         </div>
         {{-- Logo Amanco --}}
         {{-- <div class="d-none d-lg-block col-3 col-md-2 col-lg-2">
-            <img class="logo" src="{{ asset('img/logo-amanco.png')}}" alt="">
+            <img class="logo" src="{{ asset('img/logo-amanco.png')}}" alt="Logo">
         </div> --}}
         {{-- Logo Bodegas Argentina --}}
         <div class="d-none d-lg-block col-3 col-md-2 col-lg-2 my-4">
-            <img class="logo" src="{{ asset('img/logo-bodegasargentina.png')}}" alt="">
+            <img class="logo" src="{{ asset('img/logo-bodegasargentina.png')}}" alt="Logo Bodegas Argentina- Ibarzabal Servicios Inmobiliarios">
         </div>
         {{-- Logo Carrefour --}}
         <div class="d-none d-lg-block col-3 col-md-2 col-lg-2 my-4">
-            <img class="logo" src="{{ asset('img/logo-carrefour2.png')}}" alt="">
+            <img class="logo" src="{{ asset('img/logo-carrefour2.png')}}" alt="Logo Carrefour - Ibarzabal Servicios Inmobiliarios">
         </div>
         {{-- Logo EMA --}}
         {{-- <div class="d-none d-lg-block col-3 col-md-2 col-lg-2 my-4">
-            <img class="logo" src="{{ asset('img/logo-ema.png')}}" alt="">
+            <img class="logo" src="{{ asset('img/logo-ema.png')}}" alt="Logo - Ibarzabal Servicios Inmobiliarios">
         </div> --}}
         {{-- Logo Faber Castell --}}
         <div class="d-none d-lg-block col-3 col-md-2 col-lg-2 my-4">
-            <img class="logo" src="{{ asset('img/logo-faber2.png')}}" alt="">
+            <img class="logo" src="{{ asset('img/logo-faber2.png')}}" alt="Logo Faber Castell - Ibarzabal Servicios Inmobiliarios">
         </div>
         {{-- Logo Galicia--}}
         <div class="d-none d-lg-block col-3 col-md-2 col-lg-2 my-4">
-            <img class="logo" src="{{ asset('img/logo-galicia.png')}}" alt="">
+            <img class="logo" src="{{ asset('img/logo-galicia.png')}}" alt="Logo Galicia - Ibarzabal Servicios Inmobiliarios">
         </div>
         {{-- Logo Gimos --}}
         {{-- <div class="d-none d-lg-block col-3 col-md-2 col-lg-2 my-4">
-            <img class="logo" src="{{ asset('img/logo-gimos.png')}}" alt="">
+            <img class="logo" src="{{ asset('img/logo-gimos.png')}}" alt="Logo - Ibarzabal Servicios Inmobiliarios">
         </div> --}}
          {{-- Logo Lecoq --}}
          <div class="d-none d-lg-block col-3 col-md-2 col-lg-2 my-4">
-                <img class="logo" src="{{ asset('img/logo-lecoq3.jpg')}}" alt="">
+                <img class="logo" src="{{ asset('img/logo-lecoq3.jpg')}}" alt="Logo Lecoq - Ibarzabal Servicios Inmobiliarios">
         </div>
         {{-- Logo Maped --}}
         <div class="d-none d-lg-block col-3 col-md-2 col-lg-2 my-4">
-                <img class="logo" src="{{ asset('img/logo-maped.png')}}" alt="">
+                <img class="logo" src="{{ asset('img/logo-maped.png')}}" alt="Logo Maped - Ibarzabal Servicios Inmobiliarios">
         </div>
         {{-- Logo Montelectro --}}
         <div class="d-none d-lg-block col-3 col-md-2 col-lg-2 my-4">
-                <img class="logo" src="{{ asset('img/logo-montelectro.png')}}" alt="">
+                <img class="logo" src="{{ asset('img/logo-montelectro.png')}}" alt="Logo Montelectro - Ibarzabal Servicios Inmobiliarios">
         </div>
          {{-- Logo OMYA --}}
          <div class="d-none d-lg-block col-3 col-md-2 col-lg-2 my-4">
-                <img class="logo" src="{{ asset('img/logo-omya.png')}}" alt="">
+                <img class="logo" src="{{ asset('img/logo-omya.png')}}" alt="Logo OMYA - Ibarzabal Servicios Inmobiliarios">
         </div>
          {{-- Logo Oxford --}}
          <div class="d-none d-lg-block col-3 col-md-2 col-lg-2 my-4">
-                <img class="logo" src="{{ asset('img/logo-oxford.png')}}" alt="">
+                <img class="logo" src="{{ asset('img/logo-oxford.png')}}" alt="Logo Oxford - Ibarzabal Servicios Inmobiliarios">
         </div>
          {{-- Logo Schneider Electric--}}
          <div class="d-none d-lg-block col-3 col-md-2 col-lg-2 my-4">
-                <img class="logo" src="{{ asset('img/logo-schneider2.png')}}" alt="">
+                <img class="logo" src="{{ asset('img/logo-schneider2.png')}}" alt="Logo Schneider Electric - Ibarzabal Servicios Inmobiliarios">
         </div>
         {{-- Logo World-Courier --}}
         <div class="d-none d-lg-block col-3 col-md-2 col-lg-2 my-4">
-                <img class="logo" src="{{ asset('img/logo-worldcourier.png')}}" alt="">
+                <img class="logo" src="{{ asset('img/logo-worldcourier.png')}}" alt="Logo World Courier - Ibarzabal Servicios Inmobiliarios">
         </div>    
     </div>
     <hr class="linea">

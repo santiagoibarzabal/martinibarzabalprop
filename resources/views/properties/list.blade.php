@@ -73,9 +73,9 @@
                                 <div class="col-12 border rounded p-3 mb-3">
                                     <div class="row">
                                         <div class="col-4 mx-2">
-                                            <img class="imagen-propiedad" id="imagen-propiedad" src="{{Storage::url($property->image)}}" alt="">
+                                        <img class="imagen-propiedad" id="imagen-propiedad" src="{{Storage::url($property->image)}}" alt="{{$property->alt_text}}">
                                             <a href="{{url('propiedades/' . $property->id . '/edit')}}" class="w-100 btn btn-link mt-4">Modificar</a>
-                                            <form action="{{ url('/propiedades'.'/'.$property->id) }}" method="POST">
+                                            <form action="{{ url('/propiedades'.'/'.$property->slug) }}" method="POST">
                                                 @method('delete')
                                                 @csrf
                                                 <button type="submit" class="w-100 btn btn-link mt-2">Eliminar</button>
