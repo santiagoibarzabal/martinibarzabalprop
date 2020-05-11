@@ -4,21 +4,21 @@
         <div id="intro" class="carousel slide" data-ride="carousel" data-interval="3000">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                <img class="d-block w-100" src="/img/retiro.png" alt="Martín Ibarzábal Servicios Inombiliarios - Retiro">
+                <img class="d-block w-100" src="/img/retiro.jpg" alt="Martín Ibarzábal Servicios Inombiliarios - Retiro">
                     <div class="carousel-caption d-none d-lg-block">
                             <h2 class="headlines d-none d-lg-block">Un lugar donde los valores no se negocian</h2>
                             <a href="{{url('/contacto')}}" class="btn btn-cta btn-danger btn-lg"> Más información </a>
                     </div>
                 </div>
                 <div class="carousel-item">
-                <img class="d-block w-100" src="/img/agira.png"alt="Martín Ibarzábal Servicios Inombiliarios - Agira">
+                <img class="d-block w-100" src="/img/agira.jpg"alt="Martín Ibarzábal Servicios Inombiliarios - Agira">
                     <div class="carousel-caption d-none d-lg-block">
                             <h2 class="headlines d-none d-lg-block">Te brindamos atención personalizada y de calidad </h2>
                             <a href="{{url('/busqueda')}}" class="btn btn-cta btn-danger btn-lg"> Realizar búsqueda</a>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="/img/guemes.png" alt="Martín Ibarzábal Servicios Inombiliarios - Guemes">
+                    <img class="d-block w-100" src="/img/guemes.jpg" alt="Martín Ibarzábal Servicios Inombiliarios - Guemes">
                         <div class="carousel-caption d-none d-lg-block">
                             <h2 class="headlines d-none d-lg-block">Contactános y encontrá la mejor opción para tu búsqueda</h2>
                             <a href="{{url('/contacto')}}" class="btn btn-cta btn-danger btn-lg"> Quiero saber más </a>
