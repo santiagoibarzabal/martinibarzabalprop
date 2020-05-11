@@ -71,18 +71,22 @@
                                                             <strong>{{ $message }}</strong>
                                                         </span>
                                                     @enderror
-                                                    </div>       
+                                                </div>       
                                             </div>
 
                                             <div class="row">
-                                                <div class="col-6">
-                                                    <input class="form-control @error('currency') is-invalid @enderror h4 border rounded  py-1" type="text" name="currency" placeholder="Moneda" value="{{old('currency')}}">
+                                                <div class="col-6">    
+                                                    {{-- <label class="btn p-0" for="currency"></label> <br> --}}
+                                                        <select class="btn mb-4" name="currency" id="currency">
+                                                            <option value="$">$</option>
+                                                            <option value="USD">USD</option>
+                                                        </select>
                                                         @error('currency')
                                                             <span class="invalid-feedback" role="alert">
                                                                 <strong>{{ $message }}</strong>
                                                             </span>
-                                                        @enderror 
-                                                </div> 
+                                                        @enderror
+                                                    </div>  
                                                 <div class="col-6">
                                                         <input class="form-control @error('price') is-invalid @enderror h4 border rounded  py-1" type="text" name="price" placeholder="Precio" value="{{old('price')}}">
                                                             @error('price')
