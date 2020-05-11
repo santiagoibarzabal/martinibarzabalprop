@@ -1,0 +1,22 @@
+<?php
+
+return [
+
+    /*
+    |--------------------------------------------------------------------------
+    | Password Reset Language Lines
+    |--------------------------------------------------------------------------
+    |
+    | The following language lines are the default lines which match reasons
+    | that are given by the password broker for a password update attempt
+    | has failed, such as for an invalid token or invalid new password.
+    |
+    */
+
+    'password' => 'Las contraseñas deben ser de por lo menos 8 caracteres y que la confirmación coincida',
+    'reset' => 'Se reseteó tu contraseña!',
+    'sent' => 'Te enviamos por mail un link de reactivación de contraseña!',
+    'token' => 'Este token de reinicio de contraseña es inválido.',
+    'user' => "No podemos encontrar un usuario con esa dirección de mail.",
+
+];
