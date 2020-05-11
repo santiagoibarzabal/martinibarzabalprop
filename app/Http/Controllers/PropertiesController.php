@@ -86,7 +86,7 @@ class PropertiesController extends Controller
             'tips' => 'required|string|max:200',
             'description' => 'required|string|max:2000',
             'full_description' => 'max:2000',
-            'image' => 'file|image',
+            'image' => 'file|image|max:5000',
             'link' => 'required|string|max:5000',
             'alt_text' => 'required|string|max:300',
             'expenses' => '',
