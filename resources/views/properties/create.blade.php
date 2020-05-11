@@ -20,7 +20,7 @@
                                             <div class="border rounded mt-2" id="info">Cargar imagen</div>
                                             {{-- <a class="btn btn-link" href="">Cargar imagen</a> --}}
                                             {{-- <label class="imagen btn btn-link" id="img" for="img"><p class="editar-avatar">Cargar imagen</p></label> --}}
-                                            <input required class="form-control imagen btn btn-link @error('image') is-invalid @enderror" type="file" name="image" value="{{old('image')}}" id="image" onchange='cambiar()'>
+                                            <input class="form-control imagen btn btn-link @error('image') is-invalid @enderror" type="file" name="image" value="{{old('image')}}" id="image" onchange='cambiar()'>
                                                 @error('image')
                                                         <span class="invalid-feedback" role="alert">
                                                             <strong>{{ $message }}</strong>
