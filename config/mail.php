@@ -62,7 +62,7 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'martin@ibarzabal.com'),
+        'address' => env('MAIL_FROM_ADDRESS', 'info@ibarzabal.com.ar'),
         'name' => 'Ibarzábal Servicios Inmobiliarios',
     ],
 
