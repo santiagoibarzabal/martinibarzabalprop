@@ -47,9 +47,10 @@
                                                         <option value="1">Departamento</option>
                                                         <option value="2">Casa</option>
                                                         <option value="3">Oficina</option>
-                                                        <option value="4">Local</option>
-                                                        <option value="5">Terreno</option>
-                                                        <option value="6">Inmueble industrial</option>
+                                                        <option value="4">Edificio</option>
+                                                        <option value="5">Local</option>
+                                                        <option value="6">Terreno</option>
+                                                        <option value="7">Inmueble industrial</option>
                                                     </select>
                                                     @error('category_id')
                                                         <span class="invalid-feedback" role="alert">
