@@ -55,6 +55,7 @@
                     <li>Oficinas</li>
                     <li>Locales</li>
                     <li>Departamentos</li>
+                    <li>Edificios</li>
                     <li>Casas</li>
                     <li>Terrenos</li>
                     <li>Industriales</li>
