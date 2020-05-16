@@ -10,24 +10,3 @@ function cambiar(){
   document.getElementById('info').innerHTML = pdrs;
 }
 
-
-
-// Agregar servicios
-
-var App = new Vue ({
-
-  el: root,
-
-  data: {
-      newService: '',
-      services: [],
-      title: 'Servicios',
-  },
-
-  methods: {
-      addService() {
-          this.services.push(this.newService)
-          this.newService =  '';
-      }
-  }
-});
