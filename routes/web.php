@@ -86,3 +86,29 @@ Route::post('/tasaciones', 'PricingsController@store');
 Route::get('/linkstorage', function () {
     Artisan::call('storage:link');
 });
+
+Route::get('/sitemap', function () {
+   '<?xml version="1.0" encoding="UTF-8"?> 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
+<url>
+  <loc>https://ibarzabal.com.ar</loc>
+</url>
+<url>
+  <loc>https://ibarzabal.com.ar/propiedades</loc>
+</url>
+<url>
+  <loc>https://ibarzabal.com.ar/tasaciones</loc>
+</url>
+<url>
+  <loc>https://ibarzabal.com.ar/busqueda</loc>
+</url>
+<url>
+  <loc>https://ibarzabal.com.ar/nosotros</loc>
+</url>
+<url>
+  <loc>https://ibarzabal.com.ar/contacto</loc>
+</url>
+<url>
+  <loc>http://ibarzabal.com.ar/tel:+5491166361321</loc>
+</url> '
+});
