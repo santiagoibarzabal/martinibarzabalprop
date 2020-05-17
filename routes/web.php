@@ -86,8 +86,3 @@ Route::post('/tasaciones', 'PricingsController@store');
 Route::get('/linkstorage', function () {
     Artisan::call('storage:link');
 });
-
-Route::get('/sitemap', function()
-{
-   return Response::view('sitemap')->header('Content-Type', 'application/xml');
-});
