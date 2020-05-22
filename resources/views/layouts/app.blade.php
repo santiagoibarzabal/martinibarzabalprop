@@ -15,7 +15,7 @@
 
     {{-- SEO --}}
 
-    <link rel="canonical" href="https://www.ibarzabal.com.ar/" />
+    <link rel="canonical" href="https://www.ibarzabal.com/" />
     <meta name="description" content=" Encontrá la propiedad en Venta y Alquiler que estás buscando. Tasaciones y búsquedas especializadas de departamentos, casas, oficinas, inmuebles industriales y terrenos en Zona Norte. Tu próxima Propiedad está Martin Ibarzabal Servicios Inmobiliarios." />
     <meta name="keywords" content="Propiedades, inmuebles, casas, departamentos, barrios cerrados, alquiler, venta, compra, alquiler temporario, argentina. Casas y Departamentos, inmuebles, propiedades, Venta y Alquiler, Argentina">
     <meta property="og:locale" content="es_AR" />
@@ -73,10 +73,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    
-    <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
     
     <script src="/js/main.js"></script>
     
