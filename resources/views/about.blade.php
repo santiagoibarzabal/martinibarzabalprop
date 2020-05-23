@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('seo')
+@include('partials.seo')
+
 @section('content')
 <section>
         <div id="intro" class="carousel slide" data-ride="carousel" data-interval="3000">

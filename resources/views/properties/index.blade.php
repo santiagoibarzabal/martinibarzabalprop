@@ -1,4 +1,6 @@
 @extends('layouts.app')
+@section('seo')
+@include('partials.seo')
 @section('content')
     <section>
            <div class="container">

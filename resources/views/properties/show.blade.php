@@ -1,4 +1,16 @@
 @extends('layouts.app')
+@section('seo')
+<link rel="canonical" href="/{{$property->slug}}"/>
+<meta name="title" content="{{$property->category->name}} en {{$property->type->name}} en {{$property->address}} - {{$property->town}}." />
+<meta name="description" content="{{$property->category->name}} en {{$property->type->name}} en {{$property->address}} - {{$property->town}}. {{$property->tips}}" />
+<meta name="keywords" content="{{$property->category->name}}, {{$property->type->name}}, {{$property->address}}, {{$property->town}}, busqueda, tasacion, ibarzabal, inmobiliaria Propiedades, Casas y Departamentos, inmuebles, propiedades, Venta y Alquiler, Argentina">
+<meta property="og:locale" content="es_AR" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Martín Ibarzábal : Alquiler y Venta de propiedades &amp; Mercado Inmobiliario, propiedades en venta y alquiler. Encontrá la propiedad que estás buscando" />
+<meta property="og:description" content="Ibarzabal Servicios Inmobiliarios puede ayudarlo su búsqueda o necesidad inmobiliaria, ya sea para comprar, alquilar o vender una propiedad. Para encontrar la solución que necesita contáctese con Ibarzabal Servicios Inmobiliarios hoy para encontrar lo qué está buscando" />
+<meta property="og:url" content="https://www.ibarzabal.com" />
+<meta property="og:image" content="{{asset('img/logo.png')}}" />
+<meta property="og:site_name" content="Martin Ibarzabal Servicios Inmobiliarios" />
 @section('content')
     <section>
            <div class="container">
