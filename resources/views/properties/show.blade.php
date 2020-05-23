@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @section('seo')
 <link rel="canonical" href="/{{$property->slug}}"/>
-<meta name="title" content="{{$property->category->name}} en {{$property->type->name}} en {{$property->address}} - {{$property->town}}." />
 <meta name="description" content="{{$property->category->name}} en {{$property->type->name}} en {{$property->address}} - {{$property->town}}. {{$property->tips}}" />
 <meta name="keywords" content="{{$property->category->name}}, {{$property->type->name}}, {{$property->address}}, {{$property->town}}, busqueda, tasacion, ibarzabal, inmobiliaria Propiedades, Casas y Departamentos, inmuebles, propiedades, Venta y Alquiler, Argentina">
 <meta property="og:locale" content="es_AR" />
@@ -11,6 +10,7 @@
 <meta property="og:url" content="https://www.ibarzabal.com" />
 <meta property="og:image" content="{{asset('img/logo.png')}}" />
 <meta property="og:site_name" content="Martin Ibarzabal Servicios Inmobiliarios" />
+<title> {{$property->category->name}} en {{$property->type->name}} en {{$property->town}} | Ibarzabal Servicios Inmobiliarios </title>
 @section('content')
     <section>
            <div class="container">
