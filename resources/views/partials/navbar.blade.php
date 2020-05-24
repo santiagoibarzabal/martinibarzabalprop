@@ -3,7 +3,7 @@
         <nav class="">
             <div class="row d-flex justify-content-center align-items-center">
                     <div class="d-none d-lg-flex align-self-start my-1">
-                             <a href=""><img class="logo-navbar" src="{{asset('img/logo4.png')}}" alt="Logo - Ibarzabal servicios inmobiliarios"> </a>
+                             <a href="https://ibarzabal.com/"><img class="logo-navbar" src="{{asset('img/logo4.png')}}" alt="Logo - Ibarzabal servicios inmobiliarios"> </a>
                      </div>
                     <div class="d-none d-lg-block mx-2 navbar-item">
                         <li>
