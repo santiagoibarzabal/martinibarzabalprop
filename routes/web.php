@@ -54,7 +54,12 @@ Route::get('/propiedades/{slug}', 'PropertiesController@show')->name('prop');
 
 Route::post('/propiedades/{id}', 'PropformController@store');
 
-// Categorias
+// Galerias
+  
+Route::get('/propiedades/{slug}/galeria', 'PropertyGalleryController@index');
+// Route::get('/propiedades/{slug}/galeria/agregar', 'PropertyGalleryController@create');
+// Route::post('/propiedades/{slug}/galeria', 'PropertyGalleryController@store');
+  
 
 
 // NOSOTROS

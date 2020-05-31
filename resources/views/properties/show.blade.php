@@ -73,7 +73,7 @@
                                 <div class="row">
                                     <div class="col-0 col-4 mx-2">
                                     <a href="{{url('propiedades/'.$property->slug)}}"><img class="d-none d-md-block imagen-propiedad" src="{{Storage::url($property->image)}}" alt="{{$property->alt_text}}"></a>
-                                    <a target="_blank" href="{{url($property->link)}}" class="d-none d-md-block w-100 btn btn-link mt-4">Ver Fotos (Zona Prop)</a>
+                                    <a href="{{($property->slug.'/galeria')}}" class="d-none d-md-block w-100 btn btn-link mt-4">Ver Galería</a>
                                         {{-- <a target="_blank" href="{{url('contacto')}}" class="imagen-propiedad btn btn-link mt-2">Consulta escrita</a> --}}
                                         <a target="_blank" href="tel:+5491166361321" class="d-none d-md-block w-100 btn btn-link mt-2">Llamar</a>
                                         @if(isset(auth()->user()->role_id) && auth()->user()->role_id == '1')
