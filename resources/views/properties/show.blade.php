@@ -95,7 +95,7 @@
                                                 @endif
                                             </div>
                                         </div>
-                                        <a target="_blank" href="https://www.zonaprop.com.ar/propiedades/piso-alto-160-m-sup2--con-aire-acondicionado-central-45578250.html#&gid=1&pid=1" class="d-md-none w-100 btn btn-link mt-4">Ver Fotos (Zona Prop)</a>
+                                        <a href="{{($property->slug.'/galeria')}}" class="d-md-none w-100 btn btn-link mt-4">Ver Galería</a>
                                         {{-- <a target="_blank" href="{{url('contacto')}}" class="imagen-propiedad btn btn-link mt-2">Consulta escrita</a> --}}
                                         <a target="_blank" href="tel:+5491166361321" class="d-md-none w-100 btn btn-link mt-2">Llamar</a>
                                         @if(isset(auth()->user()->role_id) && auth()->user()->role_id == '1')
