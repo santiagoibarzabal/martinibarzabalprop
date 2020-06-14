@@ -33,6 +33,18 @@ class SearchsController extends Controller
         return view('searchs.create');
     }
 
+    /** 
+     * The response to always send back to the frontend 
+     * 
+     * @return \Illuminate\Http\Response 
+     */ 
+
+    protected function formResponse() 
+    { 
+        return redirect()->back()
+            ->withSuccess('Your form has been submitted'); 
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -47,6 +59,10 @@ class SearchsController extends Controller
             'phone' => 'required',
             'question' => 'required'
         ]);
+
+        if ($request->faxonly) {
+            return $this->formResponse();
+        }
 
         $email = new Contact;
         

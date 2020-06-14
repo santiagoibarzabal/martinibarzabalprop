@@ -34,6 +34,17 @@ class PropformController extends Controller
     {
         // 
     }
+    
+    /** 
+     * The response to always send back to the frontend 
+     * 
+     * @return \Illuminate\Http\Response 
+     */ 
+    protected function formResponse() 
+    { 
+        return redirect()->back()
+            ->withSuccess('Your form has been submitted'); 
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -48,6 +59,10 @@ class PropformController extends Controller
             'phone' => 'required',
             'question' => 'required'
         ]);
+
+        if ($request->faxonly) {
+            return $this->formResponse();
+        }
 
         $email = new Contact;
         

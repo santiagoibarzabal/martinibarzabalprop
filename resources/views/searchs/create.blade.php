@@ -49,6 +49,12 @@
                             </span>
                             @enderror
                     </div>
+
+                    <div class="form-group" style="display: none;">
+                        <label for="faxonly">Fax Only
+                         <input type="checkbox" name="faxonly" id="faxonly" />
+                        </label>
+                    </div>
                     
                     <div class="d-flex justify-content-center mt-4"> 
                         <input type="submit" class="btn btn-md btn-contacto" value="Enviar">

@@ -181,6 +181,12 @@
                                     </span>
                                     @enderror
                             </div>
+
+                            <div class="form-group" style="display: none;">
+                                <label for="faxonly">Fax Only
+                                 <input type="checkbox" name="faxonly" id="faxonly" />
+                                </label>
+                            </div>
                             
                             <div class="d-flex justify-content-center"> 
                                 <input type="submit" class="btn btn-md btn-contacto" value="Enviar">
@@ -190,6 +196,8 @@
                                         {{session('message')}}
                                     </p>
                             @endif
+
+                            
                             {{-- <br><br> --}}
                             {{-- <a class="btn btn-contacto" href="htps://api.whatsapp.com/send?phone=5491166361321"> Enviar WhatsApp</a> --}}
                             

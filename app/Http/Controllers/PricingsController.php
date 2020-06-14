@@ -32,6 +32,17 @@ class PricingsController extends Controller
         return view('pricings.create');
     }
 
+    /** 
+     * The response to always send back to the frontend 
+     * 
+     * @return \Illuminate\Http\Response 
+     */ 
+    protected function formResponse() 
+    { 
+        return redirect()->back()
+            ->withSuccess('Your form has been submitted'); 
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -46,9 +57,11 @@ class PricingsController extends Controller
             'phone' => 'required',
             'question' => 'required'
         ]);
-
-        $email = new Contact;
         
+        if ($request->faxonly) {
+            return $this->formResponse();
+        }
+        $email = new Contact;
         $email->name = request('name');
         $email->email = request('email');
         $email->phone = request('phone');
