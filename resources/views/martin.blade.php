@@ -4,17 +4,19 @@
 @section('content')
 <section>
     <div class="container">
-        <div class="h1 titulo-servicios text-center">
+        <div class="h2 titulo-servicios text-center mt-4">
             Nosotros
         </div>
-        <div class="h4 titulo-servicios text-center">
+        <div class="h4 subtitulo-servicios text-center">
             Martín Ibarzábal
         </div>
-        <div class="row d-flex justify-content-center mt-4">
+        <hr class="col-9">
+        <div class="row d-flex justify-content-center mt-2">
             <div class="col-9 col-md-6">
+                
                 <ul class="list-unstyled h5">
                     <li>
-                        Corredor Inmobiliario <br> Matricula Provincia de Buenos Aires CMCPSI nº 4830 <br>
+                        Martín Ibarzabal es Corredor Inmobiliario <br> Matricula Provincia de Buenos Aires CMCPSI nº 4830 <br>
                         Ciudad Autónoma de Buenos Aires CUCICBA nº 611.
                     </li>
                     <br>
