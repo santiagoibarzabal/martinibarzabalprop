@@ -28,7 +28,7 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One|Rubik:700&display=swap" rel="stylesheet">
    
-    <link rel="shortcut icon" href="{{asset('img/logo-ibar.jpg')}}" type="image/x-icon" alt="Martin Ibarzabal Servicios Inmobiliarios">
+    <link rel="shortcut icon" href="{{asset('img/logo-ibar2.jpg')}}" type="image/x-icon" alt="Martin Ibarzabal Servicios Inmobiliarios">
     
 </head>
 <body>
