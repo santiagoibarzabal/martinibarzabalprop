@@ -118,33 +118,6 @@ class PropertiesController extends Controller
           $property->slug = $slug;
           
           $property->save();
-
-          
-        
-        //   foreach ($request->features as $key => $value) { 
-        //     if(isset($value)) {
-        //         $feature = new Feature;
-        //         $feature->name = $value;
-        //         $property->features()->save($feature);
-        //         } 
-        //     }
-            
-            
-        //     foreach ($request->rooms as $key => $value) { 
-        //         if(isset($value)) {
-        //             $room = new Room;
-        //             $room->name = $value;
-        //             $property->rooms()->save($room);
-        //         } 
-        //     }
-        
-        //     foreach ($request->services as $key => $value) { 
-        //         if(isset($value)) {
-        //             $service = new Service;
-        //             $service->name = $value;
-        //             $property->services()->save($service);
-        //         }
-        //     }
             
        
           
@@ -168,17 +141,11 @@ class PropertiesController extends Controller
 
         $properties = Property::all();
 
-        // $features = $property->features;
-        // $rooms = $property->rooms;
-        // $services = $property->services;
         
         return view('properties.show', [
             'property' => $property,
             'categories' => $categories,
             'types' => $types,
-            // 'features' => $features,
-            // 'rooms' => $rooms,
-            // 'services' => $services,
             ]);
     }
 
@@ -192,17 +159,9 @@ class PropertiesController extends Controller
     {   
         $property = Property::find($id);
 
-        // $features = $property->features;
-        // $rooms = $property->rooms;
-        // $services = $property->services;
-        
-
         return view('properties.edit', [
             'property' => $property,
             'id' => $id,
-            // 'features' => $features,
-            // 'rooms' => $rooms,
-            // 'services' => $services
             ]);
     }
     
@@ -257,11 +216,6 @@ class PropertiesController extends Controller
           ]);
 
           $property = Property::find($id);
-        //   $incompleteRequest = $request->all();
-           
-        //   Arr::forget($incompleteRequest, 'features');
-        //   Arr::forget($incompleteRequest, 'rooms');
-        //   Arr::forget($incompleteRequest, 'services');
 
           $diff = array_diff($request->all(), $property->toArray());
 
@@ -277,32 +231,6 @@ class PropertiesController extends Controller
            
 
             $property->update($diff);
-
-            // Feature::where('property_id', $id)->delete();
-            // foreach ($request->features as $key => $value) { 
-            //     if(isset($value)) {
-            //         $feature = new Feature;
-            //         $feature->name = $value;
-            //         $property->features()->save($feature);
-            //     } 
-            // }
-            // Room::where('property_id', $id)->delete();
-            // foreach ($request->rooms as $key => $value) { 
-            //     if(isset($value)) {
-            //         $room = new Room;
-            //         $room->name = $value;
-            //         $property->rooms()->save($room);
-            //     } 
-            // }
-            // Service::where('property_id', $id)->delete();
-            // foreach ($request->services as $key => $value) { 
-            //     if(isset($value)) {
-            //         $service = new Service;
-            //         $service->name = $value;
-            //         $property->services()->save($service);
-            //     } 
-            // }
-           
             
         
           return redirect('/propiedades');
